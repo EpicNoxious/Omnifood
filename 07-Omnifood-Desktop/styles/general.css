@@ -1,51 +1,71 @@
-/* 
-01--TYPOGRAPHY SYSTEM 
+/*
+--- 01 TYPOGRAPHY SYSTEM
 
-SPACING SYSTEM (px)
-2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
 
-Font Weight
+- Font weights
 Default: 400
 Medium: 500
-Semi-Bold: 600
+Semi-bold: 600
 Bold: 700
 
-Line Height
+- Line heights
 Default: 1
-Paragraphs: 1.6
+Small: 1.05
+Medium: 1.2
+Paragraph default: 1.6
+Large: 1.8
 
-02--COLORS
+- Letter spacing
+-0.5px
+0.75px
 
-Primary: #e67e22
-Tints: 
+--- 02 COLORS
+
+- Primary: #e67e22
+- Tints:
 #fdf2e9
 #fae5d3
-Shades: #cf711f
-Accents:
-Greys: #555
+#eb984e
+
+- Shades: 
+#cf711f
+#45260a
+
+- Accents:
+- Greys
+
+#888
+#767676 (lightest grey allowed on #fff)
+#6f6f6f (lightest grey allowed on #fdf2e9)
+#555
 #333
-#6f6f6f
 
-03--Images
-All images are already stored in img folder inside the 07-Omnifood-Desktop folder
+--- 05 SHADOWS
 
-04--Shadows
+0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
 
-05--Border Radius
-borer-radius: 0.9rem
-medium-border-radius: 1.1rem
+--- 06 BORDER-RADIUS
 
-06--White Space
+Default: 9px
+Medium: 11px
 
+--- 07 WHITESPACE
 
-FONT SIZE SYSTEM (px)
-10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 */
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
 }
 
 html {
@@ -93,6 +113,10 @@ strong {
   grid-template-columns: repeat(4, 1fr);
 }
 
+.grid--5-cols {
+  grid-template-columns: repeat(5, 1fr);
+}
+
 .grid-center-vertically {
   align-items: center;
 }
@@ -132,6 +156,19 @@ strong {
   letter-spacing: 0.75px;
 }
 
+.btn--form {
+  background-color: #45260a;
+  color: #fdf2e9;
+  align-self: end;
+  padding: 1.2rem !important;
+}
+
+.btn--form:hover {
+  background-color: #fff;
+  color: #45260a;
+}
+
+.btn,
 .btn:link,
 .btn:visited {
   display: inline-block;
@@ -142,6 +179,9 @@ strong {
   padding: 1.6rem 3.2rem;
   border-radius: 0.9rem;
   transition: all 0.3s;
+
+  border: none;
+  cursor: pointer;
 }
 
 .btn--full:link,
